@@ -1,0 +1,20 @@
+class Data {
+	constructor() {
+		this.record={
+		}
+	}
+	adding(key1, value1) {
+	this.record[key1] = key1.push(value1)
+	}
+}
+
+var Ref= new Data()
+
+console.log(Ref.record)
+
+Ref.adding("training", function() {
+	console.log("Cookie break")
+}
+
+console.log(Ref.record)
+Ref.record.training()
