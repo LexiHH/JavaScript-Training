@@ -32,6 +32,7 @@ function indexRequest(req, res) {
 		var record=""
 		req.on("data", function(chunk) {
 			data+=chunk
+			console.log(data)
 		})
 		req.on("end", function() {
 			record=querystring.parse(data)
