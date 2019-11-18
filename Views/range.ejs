@@ -1,0 +1,14 @@
+<HTML>
+<center>Time Table of <b> <%=T%></b>
+<BR>
+Select the Range:
+<BR>
+<%
+	for(var r=10;r<=100;r+=10) {
+%>
+<A href='/timetable/<%=T%>/<%=r%>'> <%=r%> </A>
+<BR>
+<%
+}
+%>
+</HTML>

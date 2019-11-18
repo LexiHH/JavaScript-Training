@@ -1,0 +1,26 @@
+<HTML>
+<%- include("header.ejs",{"Loggeduser":Loggeduser}) %>
+<BR>
+<center>
+<table>
+	<tr>
+		<th>
+			Regno:
+		</th>
+		<th>
+			Name:
+		</th>	
+	</tr>
+	<%Results.forEach(function(record) {%>
+	<tr>
+		<td>
+			<%=record.regno%>
+		</td>
+		<td>
+			<%=record.name%>
+		</td>
+	</tr>
+	<%})%>
+</table>
+</center>
+</HTML>

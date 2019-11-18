@@ -1,0 +1,44 @@
+<HTML>
+<%- include("header.ejs",{"Loggeduser":Loggeduser}) %>
+<BR>
+<center>
+<table>
+	<tr>
+		<td>
+			<input type="button" value="Add New Person" onclick="parent.location='/createperson'">
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Regno:
+		</th>
+		<th>
+			Name:
+		</th>
+		<th>
+			Address:
+		</th>
+		<th>
+			Operation:
+		</th>		
+	</tr>
+	<%Results.forEach(function(record) {%>
+	<tr>
+		<td>
+			<%=record.regno%>
+		</td>
+		<td>
+			<%=record.name%>
+		</td>
+		<td>
+			<%=record.address%>
+		</td>
+		<td>
+			<input type="button" value="edit" onclick="parent.location='/editform/<%=record.regno%>/<%=record.name%>/<%=record.address%>'">
+			<input type="button" value="delete" onclick="parent.location='/deleted/<%=record.regno%>'">
+		</td>
+	</tr>
+	<%})%>
+</table>
+</center>
+</HTML>
